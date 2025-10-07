@@ -19,8 +19,8 @@
   <summary><strong>📌 Overview (click)</strong></summary>
 
 ### **Overview**  
-> This Power BI project provides data-driven insights into business performance, focusing on metrics such as **sales trends**, **customer behavior**, **product analysis**, and **geographic performance**.  
-> The dashboard is designed to support stakeholders in making informed decisions through visual and interactive analytics.
+> This Power BI project transforms Uber operational data into actionable business intelligence, focusing on **supply-demand dynamics**, **driver performance**, **request fulfillment rates**, and **geographic efficiency**.  
+> The dashboard enables stakeholders to identify revenue leakage opportunities and optimize fleet operations through interactive analytics and visual insights.
 
 </details>
 
@@ -28,82 +28,80 @@
   <summary><strong>📂 Data Sources (click)</strong></summary>
 
 ### **Data Sources**  
-> The dataset includes multiple structured tables capturing essential data related to operations, customers, and products.
+> The analysis leverages structured Uber operational data capturing the complete ride request lifecycle across multiple dimensions.
 
-**▼ 📑 Example Tables**  
-1. **Sales Table**
-   - `Order ID`, `Customer ID`, `Product`, `Category`, `Order Date`, `Quantity`, `Unit Price`, `Total Sales`
+**▼ 📑 Data Tables Structure**  
+1. **Ride Requests (Fact Table)**
+   - `Request ID`, `Driver ID`, `Requests Timestamp`, `Pickup point`, `Status`, `Drop Timestamp`, `Time`
 
-2. **Customer Table**
-   - `Customer ID`, `Name`, `Segment`, `Location`
-
-3. **Product Table**
-   - `Product ID`, `Product Name`, `Category`, `Cost`
+2. **Drivers (Dimension Table)**
+   - `Driver ID`, `Driver Name`
 
 </details>
 
 ---
 
 ## 🎯 Case Study  
-This project addresses a real-world scenario where a business needed a centralized dashboard to:
-- Monitor sales and profitability over time  
-- Highlight top and underperforming products  
-- Understand customer demographics and behavior  
-- Support decisions on marketing, inventory, and operations  
+This project addresses a real-world scenario where Uber needed an operational analytics dashboard to:
+- Monitor ride request fulfillment rates and driver performance  
+- Identify supply-demand imbalances across time and locations  
+- Analyze root causes of revenue leakage from unfulfilled rides  
+- Support strategic decisions on fleet allocation and driver incentives  
 
 ---
 
-## 📊 Main KPIs
-- **💰 Total Revenue**
-- **📦 Number of Orders**
-- **👥 Total Customers**
-- **🏆 Best Performing Products**
-- **📉 Low Performing Products**
-- **🕒 Time-Based Trends**
-- **📍 Regional Performance**
-- **📊 Customer Segmentation**
+## 📊 Main KPIs  
+
+| KPI | Value |
+|-----|-------|
+| 🚗 Total Ride Requests | **6,745** |
+| ✅ Completion Rate | **41.97%** |
+| ❌ Unfulfillment Rate | **39.29%** |
+| ⭐ Top Performing Driver | **Michael Ferguson** |
+| 🌍 Geographic Imbalance | **City 52% vs Airport 48%** |
+| 🕒 Critical Time Slot | **6 PM - Midnight** |
+| 📊 Supply-Demand Gap | **Airport 65% vs City 35%** |
 
 ---
 
 ## ⚙️ Process
-1. Imported raw data into Power BI  
-2. Cleaned and transformed data using Power Query  
-3. Built a star schema for modeling relationships  
-4. Created DAX measures for dynamic metrics and KPIs  
-5. Designed interactive visuals, slicers, and filters  
+1. Imported and cleaned Uber operational data using Power Query  
+2. Built star schema data model with fact and dimension tables  
+3. Created DAX measures for Completion Rate and Unfulfillment Rate  
+4. Developed time intelligence for hourly/daily trend analysis  
+5. Designed interactive dashboards with supply-demand visuals  
 
 ---
 
 ## 📐 Data Model  
-![Data Model](https://github.com/your-username/your-repo/blob/main/assets/data-model.png?raw=true)
+![Data Model](Modling.png?raw=true)
 
 ---
 
 ## 📈 Dashboard Preview  
-<img src="https://github.com/your-username/your-repo/blob/main/assets/dashboard-1.png?raw=true" width="1000">
-<img src="https://github.com/your-username/your-repo/blob/main/assets/dashboard-2.png?raw=true" width="1000">
+<img src="Overview.png?raw=true" width="1000">
+<img src="Unfullfillment_Analysis.png?raw=true" width="1000">
 
 ---
 
-
-
-
 ## 🔍 Key Insights
-1. **Insight #1**: [e.g., High revenue concentration in a few products]  
-2. **Insight #2**: [e.g., Peak sales during specific months or events]  
-3. **Insight #3**: [e.g., Specific customer segments show high loyalty]  
-4. **Insight #4**: [e.g., Underutilized regions or product categories]  
-5. **Insight #5**: [e.g., Inventory challenges during high demand periods]  
+1. **Revenue Leakage**: 58.03% unfulfillment rate representing 2,914 lost rides and ~$2.8M potential revenue loss
+2. **Peak Demand Strain**: 42% unfulfillment on Thursday/Friday evenings (6 PM - midnight)
+3. **Geographic Imbalance**: 65% of drivers stationed at Airport despite City generating 52% of requests
+4. **Driver Performance Gap**: Average 69.13% completion rate with significant variation among drivers
+5. **Supply-Demand Mismatch**: "No Cars Available" (2,650) was primary issue over Cancellations (1,264)
 
 ---
 
 ## 💡 Conclusion
-This dashboard enables data-driven decision-making by offering a comprehensive view of performance metrics. It supports strategic planning by highlighting key trends, patterns, and opportunities for optimization.
+This Power BI dashboard transforms Uber operations data into actionable intelligence, revealing critical supply-demand gaps and revenue recovery opportunities. By identifying the 58.03% unfulfillment root causes and geographic imbalances, it provides a clear roadmap for optimizing fleet allocation, implementing surge pricing during peak hours, and improving driver performance to capture an estimated $2.8M in potential revenue.
 
 ---
 
 ## 🧰 Tools Used
-- **Power BI Desktop**  
-- **Power Query**  
-- **DAX**  
-- **Excel (for data prep)**  
+- **Power BI Desktop**
+- **Power Query**
+- **DAX**
+- **Data Modeling**
+- **Data Visualization**
+- **Time Intelligence**
