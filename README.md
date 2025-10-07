@@ -5,7 +5,6 @@
 
 ---
 
-<br>
 ## 🎥 Project Demo  
 <img src="Gif.gif?raw=true" width="1000">
 
